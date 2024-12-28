@@ -1,0 +1,7 @@
+<drac2>
+choices = ["bird", "crane", "duck", "rabbit", "fish", "boat"]
+result = randchoice(choices)
+character().set_cvar("paper_familiar", result)
+
+return f'''embed -title "{name} has folded a paper {result}." -desc "A sturdy construction, and with enough magic, a trusty companion." -thumb "{image}"'''
+</drac2>

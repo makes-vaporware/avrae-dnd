@@ -1,0 +1,12 @@
+<drac2>
+if not character().cc_exists("Star Map: Guiding Bolt"):
+    return f'''embed -title "{name} doesn't have Star Map: Guiding Bolt!" -desc "This alias requires the custom counter \\\"Star Map: Guiding Bolt\\\" to function. Check `!help sguide` for more information!" -thumb "{image}" -color "#444444"'''
+
+if character().get_cc("Star Map: Guiding Bolt") < 1:
+    counter = character().cc("Star Map: Guiding Bolt")
+    return f'''embed -title "{name} is out of Star Map: Guiding Bolt slots!" -f "Star Map: Guiding Bolt|{counter.full_str()}" -f "Description|{counter.desc}" -footer "Guiding Bolt was not cast." -thumb "{image}" -color "#444444"'''
+
+return f'''multiline
+{ctx.prefix}cc "Star Map: Guiding Bolt" -1
+{ctx.prefix}cast "guiding bolt" -i {' '.join(&ARGS&)}'''
+</drac2>
