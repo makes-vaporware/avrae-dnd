@@ -1,0 +1,1 @@
+Specify an amount of damage to mitigate with Tomb of Levistus.

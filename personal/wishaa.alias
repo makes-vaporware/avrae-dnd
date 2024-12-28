@@ -1,0 +1,7 @@
+<drac2>
+if character().spellbook.get_slots(9):
+    character().spellbook.use_slot(9)
+    return f'''cast "armor of agathys" -i -l 8 -phrase "Casted at Level 8 through Wish."'''
+else:
+    return  f'''cast "wish"'''
+</drac2>

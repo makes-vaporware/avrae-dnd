@@ -1,0 +1,1 @@
+Prematurely ends the current effects of Tomb of Levistus.

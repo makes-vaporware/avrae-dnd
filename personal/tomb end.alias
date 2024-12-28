@@ -1,0 +1,6 @@
+<drac2>
+return f'''multiline
+{ctx.prefix}embed -title "Tomb of Levistus ends..." -desc "Removing THP and related effects from the current character." -thumb {image} -color #ffffff
+{ctx.prefix}i re "{name}" "Tomb of Levistus"
+{ctx.prefix}g thp 0'''
+</drac2>

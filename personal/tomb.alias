@@ -1,0 +1,10 @@
+<drac2>
+if not character().cc_exists("Tomb of Levistus"):
+    return f'''embed -title "{name} doesn't have Tomb of Levistus!" -desc "This alias requires the custom counter \\\"Tomb of Levistus\\\" to function. Check `!help sguide` for more information!" -thumb "{image}" -color "#444444"'''
+
+if character().get_cc("Tomb of Levistus") < 1:
+    counter = character().cc("Tomb of Levistus")
+    return f'''embed -title "{name} is out of Tomb of Levistus slots!" -f "Tomb of Levistus|{counter.full_str()}" -f "Description|{counter.desc}" -footer "Tomb of Levistus was not used." -thumb "{image}" -color "#444444"'''
+
+return f'''a "Tomb of Levistus" -f "Effect|On future usages with `!tomb`, you can use `-amt #` to represent the amount mitigated."'''
+</drac2>
